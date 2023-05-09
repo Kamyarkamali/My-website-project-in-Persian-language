@@ -1,12 +1,13 @@
 import React from 'react';
 import Typewriter from 'typewriter-effect';
+import "./RandomText.css";
 
 function RandomText() {
   return (
-    <div>
+    <div className='containertext'>
       <Typewriter
         options={{
-          strings: ["برنامه نویسی فرانت اند","طراحی سایت","برنامه نویسی سایت","جاوا اسکریپت","ری اکت","ریداکس"],
+          strings: ["برنامه نویسی فرانت اند","طراحی سایت"],
           autoStart: true,
           loop: true,
         }}

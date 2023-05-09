@@ -1,4 +1,4 @@
-import React, { useState } from 'react';
+import React, { useEffect, useState ,useContext} from 'react';
 import {Link} from "react-router-dom";
 
 //Icons
@@ -11,6 +11,8 @@ import MenuIcon from '@mui/icons-material/Menu';
 import ConnectWithoutContactIcon from '@mui/icons-material/ConnectWithoutContact';
 import CloseIcon from '@mui/icons-material/Close';
 import RandomText from "../RandomText/RandomText";
+import image1 from "../assets/kamyar.jpg";
+import { DarkModeContext } from '../Context/darkModeAction';
 
 
 
@@ -20,17 +22,33 @@ import "./Headre.css";
 function Headere() {
   const [show,setShow]=useState(false);
 
+  const { toggle } = useContext(DarkModeContext);
+
   const shoHandeler=()=>{
     setShow(!show)
   }
 
+ 
+
+  useEffect(()=>{
+    document.title="کامیار کمالی کمازانی"
+  },[])
+
+
+
   return (
-    <div className='headercontainer'>
+    <React.Fragment>
+    <div className="headercontainer">
+      <div className='darkmode'>
+    <NightlightRoundIcon className='icondark' onClick={toggle}/>
+      </div>
       <h2>به سایت من خوش آمدید</h2>
+      <div className='text1'>
       <RandomText/>
+      </div>
       <div className='hambirger'>
         {!show ?<div className="itemhamburger">
-        <CloseIcon fontSize='large' className='icon'onClick={shoHandeler}/>
+        <CloseIcon fontSize='large' className='icon'/>
           <ul>
             <li><Link to={"/"}>صفحه اصلی</Link></li>
             <li><Link to={"/"}>درباره من</Link></li>
@@ -66,11 +84,16 @@ function Headere() {
           </div>
         </ul>
         <div className='darkmod'>
-        <NightlightRoundIcon/>
       </div>
       </div>
-      
+      <div className="logo">
+        <img src={image1} alt="kamyar" />
+      </div>
+      <div className='text2'>
+      <RandomText/>
+      </div>
     </div>
+    </React.Fragment>
   )
 }
 
