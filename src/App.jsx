@@ -9,7 +9,7 @@ import Headere from './Components/Header/Headere';
 import About from './Components/About/About';
 import Logo from './Components/Logo/Logo';
 import Skills from './Components/Skills/Skills';
-
+import Project from './Components/MyProject/Project';
 export const ThemeContext=createContext(null)
 
 
@@ -30,11 +30,12 @@ function App() {
 
   return (
         <ThemeContext.Provider value={{theme,toggle}}>
-      <div id={theme} data-aos="fade-down">
+      <div className='allcontainer' id={theme} data-aos="fade-down">
       <Headere aboutUser={aboutUser}/>
       <Logo/>
       <About aboutUser={aboutUser}/>
       <Skills/>
+      <Project/>
       </div>
     </ThemeContext.Provider>
   )

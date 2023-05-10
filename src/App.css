@@ -6,6 +6,10 @@
     list-style: none;
 }
 
+.allcontainer{
+    width: 100%;
+}
+
 #light{
     background-color: #fff;
 }
@@ -13,6 +17,10 @@
 #light .span{
     color: #000;
     font-weight: bold;
+}
+
+#light .div span{
+    color: #222;
 }
 
 #dark .containerAbout{
@@ -23,10 +31,30 @@
     color: #fff;
 }
 
+#dark .project{
+    background-color: #444;
+}
+
+#dark .project span{
+    color: #fff;
+}
+
+#dark .project a{
+    color: yellow;
+}
+
+#dark .headercontainer{
+    background-color: #222;
+}
+
 #dark .detailse p{
     color: #fff;
 }
 #dark .detailse span{
+    color: #fff;
+}
+
+#dark .h1{
     color: #fff;
 }
 

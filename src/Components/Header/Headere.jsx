@@ -1,4 +1,6 @@
 import React, { useContext, useEffect, useState} from 'react';
+import Aos from 'aos';
+import 'aos/dist/aos.css';
 
 
 import { Link } from 'react-router-dom';
@@ -22,7 +24,7 @@ import ScrollBtn from '../ScrollButtn/ScrollBtn';
 ///Styled
 import "./Headre.css";
 
-function Headere({aboutUser}) {
+function Headere() {
   const {theme,toggle}=useContext(ThemeContext)  
   const [showMenu,setShowMenu]=useState(false)
 
@@ -36,6 +38,7 @@ function Headere({aboutUser}) {
 
 
   const handleClickSkills = (event) => {
+    
     event.preventDefault();
     const skillsSection = document.getElementById("skills");
     window.scrollTo({
@@ -43,6 +46,22 @@ function Headere({aboutUser}) {
       behavior: "smooth",
     });
   };
+
+  const handleProject = (event) => {
+    event.preventDefault();
+    const projectSection = document.getElementById("projects-section");
+    const offset = 2010;
+    const position = projectSection ? projectSection.offsetTop : +350;
+    window.scrollTo({ top: position + offset, behavior: "smooth" });
+};
+
+const hamburgerHandel = (event) => {
+  event.preventDefault();
+  const projectSectionn = document.getElementById("projects-sectionss");
+  const offsett = 4230;
+  const positionn = projectSectionn ? projectSectionn.offsetTop : 0;
+  window.scrollTo({ top: positionn + offsett, behavior: "smooth" });
+};
 
   const handleClick = (event) => {
     event.preventDefault();
@@ -57,12 +76,13 @@ function Headere({aboutUser}) {
 
   useEffect(()=>{
     document.title="کامیار کمالی کمازانی"
+    Aos.init({duration:2000})
     
   },[])
 
 
   return (
-    <div>
+    <div data-aos="fade-down">
       <ScrollBtn/>
 
     <div className="headercontainer">
@@ -75,13 +95,12 @@ function Headere({aboutUser}) {
       </div>
       <div className='hambirger'>
          {showMenu ?<div className="itemhamburger">
-        <CloseIcon fontSize='large' className='icon' onClick={handleClick}/>
+        <CloseIcon fontSize='large' className='icon' onClick={closeMenu}/>
           <ul onClick={closeMenu}>
             <li><a href='#'>صفحه اصلی</a></li>
             <li><Link to='/about' id='about-section' onClick={handleClick}>درباره من</Link></li>
             <li><a href='skills' id="skills" onClick={handleClickSkills}>مهارت های من</a></li>
-            <li><a href='#'>صفحه اصلی</a></li>
-            <li><a href='#'>پروژه های انجام شده</a></li>
+          <li><a onClick={hamburgerHandel} href='projects-sectionss' id='projects-sectionss'>پروژه های انجام شده</a></li>
             <li><a href='#'>ارتباط با من</a></li>
           </ul>
         </div> :<MenuIcon fontSize='large'  className='icon' onClick={showHandeler}/>}
@@ -105,7 +124,7 @@ function Headere({aboutUser}) {
           </div>
           <div>
           <AssignmentTurnedInIcon className='icon'/>
-          <li><a href='#'>پروژه های انجام شده</a></li>
+          <li><a href='projects-section' id='projects-section' onClick={handleProject}>پروژه های انجام شده</a></li>
           </div>
           <div>
           <ConnectWithoutContactIcon className='icon'/>

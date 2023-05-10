@@ -43,7 +43,7 @@
     color: #000;
 }
 
-.important{
+.important span{
     color: red;
     font-weight: bold;
 }
