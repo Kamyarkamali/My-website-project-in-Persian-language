@@ -10,10 +10,10 @@ import About from './Components/About/About';
 import Logo from './Components/Logo/Logo';
 import Skills from './Components/Skills/Skills';
 import Project from './Components/MyProject/Project';
+import Footer from "./Components/Footer/Fouter";
+
+
 export const ThemeContext=createContext(null)
-
-
-
 function App() {
   const [theme,setTheme]=useState("dark")
 
@@ -36,6 +36,7 @@ function App() {
       <About aboutUser={aboutUser}/>
       <Skills/>
       <Project/>
+      <Footer/>
       </div>
     </ThemeContext.Provider>
   )

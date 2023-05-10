@@ -5,11 +5,14 @@ import 'aos/dist/aos.css';
 //styled
 import "./About.css";
 
+//Resumeh
+import resumeh from "../../../public/kamyar_kamali.pdf";
+
 //icons
 import BadgeIcon from '@mui/icons-material/Badge';
 import RoomIcon from '@mui/icons-material/Room';
 import ContactMailIcon from '@mui/icons-material/ContactMail';
-
+import FileDownloadIcon from '@mui/icons-material/FileDownload';
 //image
 import image1 from "../assets/kamyar.jpg";
 
@@ -26,6 +29,14 @@ function Abou() {
       <div className="detailse">
         <img src={image1} alt='kamyar'/>
         <div className="detailseabout">
+          <div className='download'>
+     <span>
+      <div className='download-resumeh'>
+     <a href={resumeh} download={true} name="download-link"> <FileDownloadIcon/>دانلود رزومه فعلی با فرمت PDF</a>
+     
+      </div>
+      </span>   
+          </div>
           <div className='title'>
           <BadgeIcon className='icon'/>
         <span>کامیار کمالی کمازانی</span>
@@ -39,6 +50,7 @@ function Abou() {
         <span>وضعیت سربازی:معافیت (کفالت)</span>
         </div>
         <p style={{color:"red"}}>چی شد که به برنامه نویسی علاقه پیدا کردم؟:</p>
+
         <div className='about'>
           <p>از کودکی علاقه خاصی به کامپیوتر و اینترنت داشتم اما نشد به دنبال علاقم برم, به دانشگاه رفتم و برخلاف علاقم حسابداری خواندم</p>
           <p>در اواسط دانشگاه چند بار قصد انصراف از دانشگاه رو داشتم اما بخاطره صرف هزینه زمانی و مالی که انجام داده بودم دانشگاه رو به اتمام رساندم</p>
