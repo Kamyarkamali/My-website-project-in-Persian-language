@@ -111,12 +111,8 @@
 }
 
 .darkmode{
-    color: #fff;
     display: flex;
-    align-items: center;
-    justify-content: left;
-    margin-left: 1rem;
-    cursor: pointer;
+    justify-content: end;
 }
 
 

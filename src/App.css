@@ -5,3 +5,31 @@
     text-decoration: none;
     list-style: none;
 }
+
+#light{
+    background-color: #fff;
+}
+
+#light .span{
+    color: #000;
+    font-weight: bold;
+}
+
+#dark .containerAbout{
+    background-color: #333;
+}
+
+#dark .span{
+    color: #fff;
+}
+
+#dark .detailse p{
+    color: #fff;
+}
+#dark .detailse span{
+    color: #fff;
+}
+
+#dark{
+    background-color: #333;
+}

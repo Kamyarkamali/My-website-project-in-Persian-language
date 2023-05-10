@@ -1,0 +1,18 @@
+.btn{
+    position: fixed;
+    top: 1100px;
+    right: 10px;
+    border: none;
+    text-align: center;
+}
+
+.btn button{
+    border: none;
+    background-color: rgb(149, 149, 231);
+    color: #fff;
+    border-radius: 50%;
+    padding: 3px;
+    font-size: 20px;
+    height: 35px;
+    cursor: pointer;
+}

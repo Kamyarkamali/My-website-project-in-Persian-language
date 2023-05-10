@@ -14,9 +14,12 @@
     "@mui/icons-material": "^5.11.16",
     "@mui/material": "^5.12.3",
     "aos": "^2.3.4",
+    "atob-umd": "^1.1.2",
     "react": "^18.2.0",
     "react-dom": "^18.2.0",
     "react-router-dom": "^6.11.1",
+    "react-scroll": "^1.8.9",
+    "react-switch": "^7.0.0",
     "react-typewriter-effect": "^1.1.0",
     "typewriter-effect": "^2.19.0"
   },
